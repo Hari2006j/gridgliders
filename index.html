@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GridGliders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'safe': '#22c55e',       // green-500
+              'warning': '#f59e0b',    // amber-500
+              'critical': '#ef4444',   // red-500
+              'primary-blue': '#3b82f6', // blue-500
+              'primary-green': '#10b981',// emerald-500
+              'base-100': '#f8fafc',    // slate-50
+              'base-200': '#e2e8f0',    // slate-200
+              'base-300': '#cbd5e1',    // slate-300
+              'text-primary': '#1e293b',// slate-800
+              'text-secondary': '#475569',// slate-600
+            },
+            keyframes: {
+              glow: {
+                '0%, 100%': { textShadow: '0 0 5px rgba(255,255,255,0.7), 0 0 10px rgba(74,222,128,0.5)' },
+                '50%': { textShadow: '0 0 10px rgba(255,255,255,1), 0 0 20px rgba(74,222,128,0.7)' },
+              },
+              fadeInScale: {
+                '0%': { opacity: 0, transform: 'scale(0.9)' },
+                '100%': { opacity: 1, transform: 'scale(1.05)' },
+              },
+               fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              }
+            },
+            animation: {
+              glow: 'glow 2s ease-in-out infinite',
+              fadeInScale: 'fadeInScale 1.5s ease-out forwards',
+              fadeIn: 'fadeIn 1s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-base-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
